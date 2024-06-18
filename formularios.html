@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Projetos - Fortes Engenharia Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <img src="fortes-black.png" alt="Fortes Engenharia">
+            <ul><hr>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="objetivo.html">Objetivo</a></li>
+                <li><a href="perguntas-frequentes.html">Perguntas frequentes</a></li>
+                <li><a href="progressos-iniciativas.html">Progressos de iniciativas</a></li>
+                <li><a href="acoes-sociais.html">Ações Sociais</a></li>
+                <li><a href="sugestoes.html">Sugestões</a></li>
+                <li><a href="formularios.html">Formulários</a></li>
+                <li><a href="administracao.html">Administração</a></li>
+                <li><a href="graficos-gerais.html">Gráficos gerais dos projetos</a></li>
+                <li><a href="agendar-reuniao.html">Agendar uma reunião</a></li>
+                <li><a href="suporte.html">Suporte</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h2>Formulário de Projetos</h2>
+            <p>Preencha o formulário abaixo para apresentar seu projeto à Fortes Engenharia.</p>
+            
+            <form action="#">
+                <label for="nomeProjeto">Nome do Projeto:</label>
+                <input type="text" id="nomeProjeto" name="nomeProjeto" required>
+                
+                <label for="descricao">Descrição do Projeto:</label>
+                <textarea id="descricao" name="descricao" rows="4" required placeholder="Descreva o projeto..."></textarea>
+                
+                <label for="responsavel">Responsável pelo Projeto:</label>
+                <input type="text" id="responsavel" name="responsavel" required>
+                
+                <label for="email">E-mail de Contato:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telefone">Telefone de Contato:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                
+                <button type="submit">Enviar Projeto</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
