@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos Gerais - Fortes Engenharia Dashboard</title>
+    <link rel="stylesheet" href="graficos-gerais.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <img src="fortes-black.png" alt="Fortes Engenharia">>
+            <ul><hr>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="objetivo.html">Objetivo</a></li>
+                <li><a href="perguntas-frequentes.html">Perguntas frequentes</a></li>
+                <li><a href="progressos-iniciativas.html">Progressos de iniciativas</a></li>
+                <li><a href="acoes-sociais.html">Ações Sociais</a></li>
+                <li><a href="sugestoes.html">Sugestões</a></li>
+                <li><a href="formularios.html">Formulários</a></li>
+                <li><a href="administracao.html">Administração</a></li>
+                <li><a href="graficos-gerais.html">Gráficos gerais dos projetos</a></li>
+                <li><a href="agendar-reuniao.html">Agendar uma reunião</a></li>
+                <li><a href="suporte.html">Suporte</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h2>Gráficos Gerais dos Projetos</h2>
+            <div class="grafico-container">
+                <canvas id="graficoGeral" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biblioteca para gráficos (exemplo usando Chart.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Dados do gráfico (exemplo)
+        var dadosProjetos = {
+            labels: ['Projeto A', 'Projeto B', 'Projeto C', 'Projeto D', 'Projeto E'],
+            datasets: [{
+                label: 'Progresso dos Projetos',
+                data: [80, 60, 40, 20, 90], // Valores de exemplo (em porcentagem)
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 206, 86, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Configurações do gráfico
+        var config = {
+            type: 'bar',
+            data: dadosProjetos,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100 // Define o máximo do eixo Y como 100%
+                    }
+                }
+            }
+        };
+
+        // Inicializa o gráfico
+        var graficoGeral = new Chart(
+            document.getElementById('graficoGeral'),
+            config
+        );
+    </script>
+</body>
+</html>
